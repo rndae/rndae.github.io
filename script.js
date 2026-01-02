@@ -7,7 +7,7 @@ function updateTime() {
   const estTime = new Date(now.getTime() + (now.getTimezoneOffset() + estOffset) * 60000);
   const hours = String(estTime.getHours()).padStart(2, '0');
   const minutes = String(estTime.getMinutes()).padStart(2, '0');
-  currentTimeElement.textContent = `${hours}:${minutes} est`;
+  currentTimeElement.textContent = `${hours}:${minutes} EST`;
 
   const startTime = new Date(sessionStorage.getItem('startTime') || now);
   sessionStorage.setItem('startTime', startTime);
