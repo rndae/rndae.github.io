@@ -3,7 +3,7 @@ function updateTime() {
   const elapsedTimeElement = document.getElementById('elapsed-time');
 
   const now = new Date();
-  const estOffset = -4 * 60; // utc-4
+  const estOffset = -5 * 60; // utc-4
   const estTime = new Date(now.getTime() + (now.getTimezoneOffset() + estOffset) * 60000);
   const hours = String(estTime.getHours()).padStart(2, '0');
   const minutes = String(estTime.getMinutes()).padStart(2, '0');
